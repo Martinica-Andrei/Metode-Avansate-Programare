@@ -9,7 +9,7 @@ def extrage_informatii(url, limita=5):
         elemente_pret = soup.find_all("div", class_="real-price font-bold")
         informatii_produse = []
         index = 0
-
+        
         for nume_element, pret_element in zip(elemente_nume, elemente_pret):
             nume = nume_element.get_text(strip=True)
             pret = pret_element.find("span").get_text(strip=True) # strip elimina spatiile g
